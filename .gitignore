@@ -52,4 +52,5 @@ rsconnect/
 #Other
 *.txt 
 *pdf
-
+/Autre/*
+/Data/*

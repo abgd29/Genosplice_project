@@ -1,5 +1,5 @@
 ---
-title: "Analyse d'expression différentielle"
+title: "DEG and ORA analysis"
 format:
   html:
     fig-width: 15
@@ -7,9 +7,9 @@ format:
 editor: visual
 ---
 
-# 1 - Session preparation 
+# 1 - Session preparation
 
-## 1.1 - Cleaning up the environnment 
+## 1.1 - Cleaning up the environnment
 
 ```{r}
 rm(list = objects()) 
@@ -128,7 +128,7 @@ ggplot(data = as.data.frame(cbind(x,y)),
   ylab("-Log10 pvalues adjusted")
 ```
 
-### Clustering 
+### Clustering
 
 ```{r}
 genes_deg_id <- rownames(deg.filtered)

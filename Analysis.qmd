@@ -1,6 +1,9 @@
 ---
 title: "Analyse d'expression différentielle"
-format: html
+format:
+  html:
+    fig-width: 15
+    fig-height: 8
 editor: visual
 ---
 
@@ -30,20 +33,22 @@ library(forcats)
 
 ```
 
-## 1.3 - Loading Data
-
-```{r}
-gene_counts = read.table("./GSE229613_gene_count_1.txt", header = TRUE) 
-rownames(gene_counts) = gene_counts$gid
-gene_counts$gid = NULL 
-gene_counts$gname = NULL
-
-```
-
-## 1.4 - Global parameters
+## 1.3 - Global parameters
 
 ```{r}
 pvalue_tresh = 0.01
+input_dir = "./Data/Input/"
+output_dir = "./Data/Output/"
+
+```
+
+## 1.4 - Loading Data
+
+```{r}
+gene_counts = read.table(paste0(input_dir, "./GSE229613_gene_count_1.txt"), header = TRUE)
+rownames(gene_counts) = gene_counts$gid
+gene_counts$gid = NULL 
+gene_counts$gname = NULL
 
 ```
 
